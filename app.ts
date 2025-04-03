@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 
 // Crear una instancia de la aplicación Express
 const app = express();
@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 // Ruta básica
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
 	const dataInfo = {
 		name: "pepe",
 		email: "pepe@email"
